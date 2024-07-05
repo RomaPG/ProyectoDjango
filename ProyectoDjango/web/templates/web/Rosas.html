@@ -1,0 +1,165 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Magical Plants</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/main.css' %}">
+  </head>
+  <body>
+    <header class="container-fluid colorc d-flex justify-content-center" >
+        <p class="mb-0 p-4"><img src="https://kdtec.cl/wp-content/uploads/2022/07/WHATSAP-300x250.png" alt="" height="40px">+56 9 4995 2957</p>
+        <p class="mb-0 p-4">RETIRO EN TIENDA Y DESPACHO A DOMICILIO <img src="https://kdtec.cl/wp-content/uploads/2022/08/3-1.webp " alt="" height="40px"> <img src="https://kdtec.cl/wp-content/uploads/2022/08/despacho-3-300x300.png" alt="" height="40"></p>
+        <p class="mb-0 p-4">Plantitamagica@tulipan.cl</p>
+    </header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand logo w-10" href="{% url 'Index' %}"><img src="https://i.ibb.co/F01BLns/f2710be3-54cd-41b4-ba5b-2f3beeb561d1.jpg" height="100px"></a>
+        <form class="d-flex w-50" role="search">
+            <input class="form-control me-2 w-49" type="search" placeholder="Buscar productos..." aria-label="">
+            <button class='btn btn-dark' type='submit'>BUSCAR</button> 
+        </form>
+              <a href="{% url 'Registro' %}">
+              <button class="btn"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="" height="30px" alt=""></button>
+              </a>
+            
+            <div class="dropdown carrito">
+              <nav> 
+                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                  <img src="https://static.vecteezy.com/system/resources/previews/016/314/897/non_2x/shopping-bag-free-png.png" alt="" height="35px" >
+                </button>
+                <form class="dropdown-menu p-4 ">     
+                  <div class="cart">
+                    <h2>Carrito</h2>
+                    <ul id="cart-items"></ul>
+                    <p>Total: $<span id="total-price">0.00</span></p>
+                  </div>
+                </form> 
+              </nav> 
+            </div>
+      </div>
+  </nav>
+</body>
+</html>
+<header class="container-fluid colorc d-flex justify-content-center">
+  <a href="{% url 'Index' %}">
+    <button class="btn">Home</button>
+  </a>
+        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Flores
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="{% url 'Rosas' %}">Rosas</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="{% url 'Claveles' %}">Claveles</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="{% url 'Tulipanes' %}">Tulipanes</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="{% url 'Girasoles' %}">Girasoles</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="{% url 'Gerbera' %}">Gerbera</a></li>
+          <li><hr class="dropdown-divider"></li>
+
+        </ul>
+    </div>
+    <a href="{% url 'Macetero' %}">
+      <button class="btn">Maceteros</button>
+    </a>
+    <a href="{% url 'Arbustos' %}">
+      <button class="btn">Arbustos</button>
+    </a>
+    <a href="{% url 'Tierra' %}">
+      <button class="btn">Tierra de hojas</button>
+    </a>
+    <a href="{% url 'Plantas' %}">
+      <button class="btn">Plantas</button>
+    </a>
+    <a href="{% url 'Abono' %}">
+      <button class="btn">Abono</button>
+    </a>
+
+</header>
+</header>
+    <div class="container">
+      <h1 class="h11">Rosas</h1>
+      <div class="grid">
+          <div class = items>
+            <img src="https://i.aquarelle.com/16/images/produits/ramo-rosas-rojas-xl-rosas-a-domicilio-550x550-34439.jpg">
+            <div class="info">
+              <h3>Rosa Roja</h3>
+              <p>Ramos de 5</p>
+              <div class="precio">
+                <p>$7.990</p>
+                <p>$4.990</p>
+              </div>
+              <button onclick="onclick=addToCart('Rosa Roja', 4.990), alert('se agrego correctamente al carro');">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class = items>
+            <img src="https://i.pinimg.com/236x/45/59/97/4559971f5ee5309a030a3fe5aaf14002.jpg">
+            <div class="info">
+              <h3>Rosa Morada</h3>
+              <p>Ramo de 5</p>
+              <div class="precio">
+                <p>$8.990</p>
+                <p>$5.490</p>
+              </div>
+              <button onclick="onclick=addToCart('Rosa Morada', 5.490), alert('se agrego correctamente al carro');">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class = items>
+            <img src="https://m.media-amazon.com/images/I/717scsOFEsL._AC_UF894,1000_QL80_.jpg">
+            <div class="info">
+              <h3>Rosa Rosa</h3>
+              <p>Ramo de 5</p>
+              <div class="precio">
+                <p>$8.990</p>
+                <p>$5.490</p>
+              </div>
+              <button onclick="onclick=addToCart('Rosa Rosa', 5.490), alert('se agrego correctamente al carro');">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class = items>
+            <img src="https://i.pinimg.com/originals/73/8a/24/738a242d37f5264d51f65c97e5ffb8b5.jpg">
+            <div class="info">
+              <h3>Rosa Blanca</h3>
+              <p>Ramo de 5</p>
+              <div class="precio">
+                <p>$8.990</p>
+                <p>$5.490</p>
+              </div>
+              <button onclick="onclick=addToCart('Rosa Blanca', 5.490), alert('se agrego correctamente al carro');">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class = items>
+            <img src="https://storage.googleapis.com/rosalinda-archivos/blog/p-1695754542.jpg">
+            <div class="info">
+              <h3>Rosa Azul</h3>
+              <p>Ramo de 5</p>
+              <div class="precio">
+                <p>$8.990</p>
+                <p>$5.490</p>
+              </div>
+              <button onclick="onclick=addToCart('Rosa Azul', 5.490), alert('se agrego correctamente al carro');">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class = items>
+            <img src="https://floresadomicilio.cl/flores-a-domicilio/1876-thickbox_default/florero-de-12-rosas-amarillas.jpg">
+            <div class="info">
+              <h3>Rosa Amarillas</h3>
+              <p>Ramo de 5</p>
+              <div class="precio">
+                <p>$7.990</p>
+                <p>$4.490</p>
+              </div>
+              <button onclick="onclick=addToCart('Rosa Amarillas', 4.490), alert('se agrego correctamente al carro');">Agregar al carrito</button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <script src="{% static '/script.js' %}"></script>
+  </body>
+</html>

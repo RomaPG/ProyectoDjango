@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.colorc{
+    background-color: #8AE570;
+}
+.colord{
+    background-color: #836843;
+}
+.letraa{
+    color: #FFFAE8;
+    font-family: georgia;
+    font-size: 50px;
+}
+.letraap{
+    color: #FFFAE8;
+    font-family: georgia;
+    margin-left: 8%;
+    font-size:20px;
+}
+
+
+.dropdown{
+    background-color: #fff;
+}
+.carrito{
+    margin-right: 6%;
+}
+ 
+.logo{
+    margin-left: 5%;
+}
+
+.dropdown nav{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: center;
+    padding: 0px;
+    background-color: #fff;
+    margin-bottom: 0px;
+    color: #333;
+}
+.ola{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+
+.dropdown nav i:hover > .buy-card{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+}
+
+
+
+.nav-card li {
+    list-style: none;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.grid{
+    display: grid;
+    max-width: 1500px;
+    margin: auto;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px,350px));
+    padding-bottom: 50px;
+}
+
+.items {
+ background-color: #f6f6f6;
+}
+
+.items img{
+    width: 100%;
+    height: 300px;
+}
+.h11{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #222;
+}
+.info{
+    padding: 15px;
+}
+
+.info h3 {
+    font-size: 1rem;
+}
+
+.info p{
+    font-size: 1.2rem;
+}
+
+.info h3,
+.info p {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.precio p:first-child{
+    text-decoration: line-through;
+}
+
+.precio{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+.precio p{
+    font-size: 1.2rem;
+}
+
+.info button{
+    padding: 1rem;
+    width: 100%;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.info button:hover {
+    background-color: #51A1FF;
+    transition: all .3s;
+}
